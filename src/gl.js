@@ -38,6 +38,14 @@ export class GL {
     return this.gl;
   }
 
+  /**
+   * Add a callable hook to be run on each render pass.
+   *
+   * @param {callable} hook
+   */
+  add_render_hook(hook) {
+    this.render_hooks.push(hook);
+  }
 
   /**
    * Create a vertex shader from the given source.
@@ -141,12 +149,29 @@ export class GL {
    * @param {float} z
    */
   set_camera_position(x, y, z) {
-    // Stay within the bounds of the quad.
-    if (x < -2 || x > 1 || y < -1 || y > 1) {
-      return;
-    }
     this.camera_position = new Vector(x, y, z);
     this.view_matrix = Matrix.identity().translate(-x, -y, -z);
+  }
+
+  /**
+   * Translates the position of the camera.
+   *
+   * @param {float} x
+   * @param {float} y
+   * @param {float} z
+   */
+  translate_camera_position(x, y, z) {
+    this.camera_position = new Vector(
+      this.camera_position.x + x,
+      this.camera_position.y + y,
+      this.camera_position.z + z,
+      0
+    );
+    this.view_matrix = Matrix.identity().translate(
+      -this.camera_position.x,
+      -this.camera_position.y,
+      -this.camera_position.z
+    );
   }
 
   /**
