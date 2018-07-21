@@ -3,5 +3,11 @@
   "version": "0.0.1",
   "author": "Dylan McGannon",
   "license": "MIT",
-  "module": "src"
+  "main": "lib/index.js",
+  "repository": "git@github.com:d0x2f/WebGL2-Tools.git",
+  "devDependencies": {
+    "eslint": "^5.2.0",
+    "eslint-config-import": "^0.13.0",
+    "eslint-plugin-import": "^0.13.0"
+  }
 }
