@@ -29,9 +29,6 @@ export class GL {
     this.view_matrix = Matrix.identity();
 
     this.camera_position = new Vector(0, 0, 0, 1);
-
-    // Add resize listener
-    window.addEventListener('resize', () => this.resize());
   }
 
   /**
