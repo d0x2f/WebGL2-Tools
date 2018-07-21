@@ -1,0 +1,7 @@
+{
+  "name": "webgl2-tools",
+  "version": "0.0.1",
+  "author": "Dylan McGannon",
+  "license": "MIT",
+  "module": "src"
+}
