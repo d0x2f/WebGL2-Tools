@@ -5,7 +5,12 @@
   "license": "MIT",
   "main": "lib/index.js",
   "repository": "git@github.com:d0x2f/WebGL2-Tools.git",
+  "scripts": {
+    "build": "babel src -d lib"
+  },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
     "eslint": "^5.2.0",
     "eslint-config-import": "^0.13.0",
     "eslint-plugin-import": "^0.13.0"

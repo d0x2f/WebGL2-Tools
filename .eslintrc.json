@@ -1,17 +1,17 @@
 {
-    "env": {
-        "browser": true,
-        "es6": true
-    },
-    "extends": "eslint:recommended",
-    "parserOptions": {
-        "ecmaVersion": 2018,
-        "sourceType": "module"
-    },
-    "plugins": [
-        "import"
-    ],
-    "rules": {
-        "import/no-commonjs": 2
-    }
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": "eslint:recommended",
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "import"
+  ],
+  "rules": {
+    "import/no-commonjs": 2
+  }
 }
